@@ -8,13 +8,15 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
   </head>
 
-  <body class="flex justify-center content-center">
+  <body class="flex justify-center content-center w-full h-full m-0 p-0">
     <!-- outer container -->
-    <div class="border border-gray-300 rounded-sm shadow-lg py-10 px-10 w-4/5 mt-10 mb-10">
+    <div
+      class="border border-gray-300 rounded-sm shadow-lg py-10 px-10 w-4/5 max-lg:w-full mt-10 mb-10"
+    >
       <!-- header (profile) -->
       <header>
         <!-- social icons-->
-        <ul class="flex flex-wrap justify-end gap-2">
+        <ul class="flex flex-wrap lg:mb-0 lg:justify-end justify-start gap-2 mb-4">
           <!-- linkedin -->
           <li>
             <a
@@ -67,21 +69,23 @@
         <div class="flex justify-between items-center">
           <div>
             <div
-              class="bg-cover bg-no-repeat rounded-full h-52 w-52"
+              class="bg-cover bg-no-repeat rounded-full w-20 h-20 lg:h-52 lg:w-52"
               style="background-image: url(./image/me.jpg)"
             ></div>
           </div>
-          <div class="grid justify-items-end">
-            <h1 class="text-7xl font-extrabold">Eric Hong (洪雋倫)</h1>
-            <p class="text-xl mt-5">Front-End / Desktop application Developer</p>
+          <div class="ml-8 lg:ml-0 grid justify-items-end">
+            <h1 class="lg:text-5xl text-2xl font-extrabold">
+              Eric Hong <span class="lg:block hidden">(洪雋倫)</span>
+            </h1>
+            <p class="text-sm lg:text-xl mt-5">Front-End / Desktop application Developer</p>
           </div>
         </div>
       </header>
       <!-- detailed info -->
-      <main class="flex gap-x-10 mt-10">
-        <div class="w-2/6">
+      <main class="flex gap-x-10 mt-10 lg:flex-row flex-col">
+        <div class="lg:w-2/6 w-full">
           <!-- contact details -->
-          <strong class="text-xl font-medium">Contact Details</strong>
+          <strong class="text-xl font-bold text-yellow-900 text-bold">Contact Details</strong>
           <ul class="mt-2 mb-10">
             <li class="px-2 mt-1">
               <strong class="mr-1">Phone </strong>
@@ -98,8 +102,10 @@
           </ul>
 
           <!-- github stats -->
-          <strong class="text-xl font-medium">Github Stats</strong>
-          <ul class="flex w-full mt-2 mb-10">
+          <strong class="text-xl font-bold text-yellow-900 text-bold hidden lg:block"
+            >Github Stats</strong
+          >
+          <ul class="lg:flex w-full mt-2 mb-10 hidden">
             <li
               class="px-2 mt-2 w-4/12 bg-pink-600 text-white text-center rounded-tl-lg rounded-bl-lg"
             >
@@ -114,7 +120,7 @@
             </li>
           </ul>
           <!-- skills -->
-          <strong class="text-xl font-medium">Skills</strong>
+          <strong class="text-xl font-bold text-yellow-900 text-bold">Skills</strong>
           <ul class="mt-2 mb-10">
             <li class="px-2 mt-1">HTML</li>
             <li class="px-2 mt-1">CSS</li>
@@ -123,7 +129,9 @@
             <li class="px-2 mt-1">Node.js</li>
             <li class="px-2 mt-1">Non-SQL</li>
           </ul>
-          <strong class="text-xl font-medium">Continuous Skill Improvement</strong>
+          <strong class="text-xl font-bold text-yellow-900 text-bold"
+            >Continuous Skill Improvement</strong
+          >
           <ul class="mt-2 mb-10">
             <li class="px-2 mt-1">About Web Accessibility and User Experience</li>
             <li class="px-2 mt-1">React</li>
@@ -132,13 +140,13 @@
             <li class="px-2 mt-1">SQL</li>
             <li class="px-2 mt-1">R</li>
           </ul>
-          <strong class="text-xl font-medium">Further Education</strong>
+          <strong class="text-xl font-bold text-yellow-900">Further Education</strong>
           <ul class="mt-2 mb-10">
             <li class="px-2 mt-1">Hahow</li>
             <li class="px-2 mt-1">Udemy</li>
             <li class="px-2 mt-1">NTU OpenCourseWare</li>
           </ul>
-          <strong class="text-xl font-medium">Interests & Hobbies</strong>
+          <strong class="text-xl font-bold text-yellow-900">Interests & Hobbies</strong>
           <ul class="mt-2">
             <li class="px-2 mt-1">Travel</li>
             <li class="px-2 mt-1">Cycling</li>
@@ -147,7 +155,7 @@
           </ul>
         </div>
         <!-- info -->
-        <div class="w-4/6">
+        <div class="lg:w-4/6 w-full">
           <section>
             <!-- about me -->
             <h2 class="text-2xl pb-1 border-b font-semibold">About</h2>
@@ -181,12 +189,14 @@
             <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Projects</h2>
             <ul class="mt-1">
               <li class="py-2">
-                <div class="flex justify-between my-1">
+                <div class="flex lg:flex-row flex-col justify-between my-1">
                   <a href="https://github.com/a9293340/YGO_Reptile_pro" target="_blank">
-                    <strong class="hover:text-blue-600">YGO_Reptile_pro</strong>
+                    <strong class="hover:text-blue-600 text-sm lg:text-base"
+                      >YGO_Reptile_pro</strong
+                    >
                   </a>
-                  <p class="flex">
-                    <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">JS</span>
+                  <p class="flex mt-1 mb-1 lg:mt-0 lg:mb-0">
+                    <span class="bg-gray-600 text-white px-2 py-1 lg:ml-1 text-xs rounded">JS</span>
                   </p>
                 </div>
                 <ul class="flex mb-2">
@@ -212,12 +222,14 @@
                 </p>
               </li>
               <li class="py-2">
-                <div class="flex justify-between my-1">
+                <div class="flex lg:flex-row flex-col justify-between my-1">
                   <a href="https://github.com/alex1234567639/Yu-Gi-Oh-api-document" target="_blank">
-                    <strong class="hover:text-blue-600">Yu-Gi-Oh-api-document</strong>
+                    <strong class="hover:text-blue-600 text-sm lg:text-base"
+                      >Yu-Gi-Oh-api-document</strong
+                    >
                   </a>
-                  <p class="flex">
-                    <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded"
+                  <p class="flex mt-1 mb-1 lg:mt-0 lg:mb-0">
+                    <span class="bg-gray-600 text-white px-2 py-1 lg:ml-1 text-xs rounded"
                       >README</span
                     >
                   </p>
@@ -242,12 +254,16 @@
                 </p>
               </li>
               <li class="py-2">
-                <div class="flex justify-between my-1">
+                <div class="flex lg:flex-row flex-col justify-between my-1">
                   <a href="https://github.com/alex1234567639/Yu-Gi-Oh-admin" target="_blank">
-                    <strong class="hover:text-blue-600">Yu-Gi-Oh-admin </strong>
+                    <strong class="hover:text-blue-600 text-sm lg:text-base"
+                      >Yu-Gi-Oh-admin
+                    </strong>
                   </a>
-                  <p class="flex">
-                    <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">HTML</span>
+                  <p class="flex mt-1 mb-1 lg:mt-0 lg:mb-0">
+                    <span class="bg-gray-600 text-white px-2 py-1 lg:ml-1 text-xs rounded"
+                      >HTML</span
+                    >
                     <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">CSS</span>
                     <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">Vue2</span>
                   </p>
@@ -278,12 +294,14 @@
                 </p>
               </li>
               <li class="py-2">
-                <div class="flex justify-between my-1">
+                <div class="flex lg:flex-row flex-col justify-between my-1">
                   <a href="https://github.com/a9293340/ygo_express" target="_blank">
-                    <strong class="hover:text-blue-600">Yu-Gi-Oh Express </strong>
+                    <strong class="hover:text-blue-600 text-sm lg:text-base"
+                      >Yu-Gi-Oh Express
+                    </strong>
                   </a>
-                  <p class="flex">
-                    <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded"
+                  <p class="flex mt-1 mb-1 lg:mt-0 lg:mb-0">
+                    <span class="bg-gray-600 text-white px-2 py-1 lg:ml-1 text-xs rounded"
                       >Nodejs</span
                     >
                     <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded"
@@ -315,12 +333,14 @@
                 </p>
               </li>
               <li class="py-2">
-                <div class="flex justify-between my-1">
+                <div class="flex lg:flex-row flex-col justify-between my-1">
                   <a href="https://github.com/a9293340/ygo_frontend" target="_blank">
-                    <strong class="hover:text-blue-600">Yu-Gi-Oh Frontend </strong>
+                    <strong class="hover:text-blue-600 text-sm lg:text-base">YGO Frontend </strong>
                   </a>
-                  <p class="flex">
-                    <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">Vue3</span>
+                  <p class="flex mt-1 mb-1 lg:mt-0 lg:mb-0">
+                    <span class="bg-gray-600 text-white px-2 py-1 lg:ml-1 text-xs rounded"
+                      >Vue3</span
+                    >
                     <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded">Vite</span>
                     <span class="bg-gray-600 text-white px-2 py-1 ml-1 text-xs rounded"
                       >Typescript</span
@@ -362,11 +382,15 @@
             <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Work Experiences</h2>
             <ul class="mt-2">
               <li class="pt-2">
-                <p class="flex justify-between text-sm">
-                  <strong class="text-base">CINO Group 偉斯股份有限公司</strong>2020/08-2022/01
+                <p
+                  class="flex lg:flex-row flex-col lg:justify-between lg:text-sm text-xs lg:mb-0 mb-1"
+                >
+                  <strong class="lg:text-base text-sm lg:mb-0 mb-1 text-yellow-800"
+                    >CINO Group 偉斯股份有限公司</strong
+                  >2020/08-2022/01
                 </p>
                 <p class="flex justify-between text-base">
-                  Job title<small>Front-End Developer</small>
+                  Job title<small class="text-pink-800">Front-End Developer</small>
                 </p>
                 <p class="text-justify text-xs">
                   In this stage, the primary responsibility involves working on the company's
@@ -385,11 +409,15 @@
                 </p>
               </li>
               <li class="pt-2">
-                <p class="flex justify-between text-sm">
-                  <strong class="text-base">CINO Group 偉斯股份有限公司</strong>2022/01-now
+                <p
+                  class="flex lg:flex-row flex-col lg:justify-between lg:text-sm text-xs lg:mb-0 mb-1"
+                >
+                  <strong class="lg:text-base text-sm lg:mb-0 mb-1 text-yellow-800"
+                    >CINO Group 偉斯股份有限公司</strong
+                  >2022/01-now
                 </p>
                 <p class="flex justify-between text-base">
-                  Job title<small>Full-Stack Engineer</small>
+                  Job title<small class="text-pink-800">Full-Stack Engineer</small>
                 </p>
                 <p class="text-justify text-xs">
                   In this stage, my responsibilities include planning the architecture and creating
@@ -416,17 +444,19 @@
             <h2 class="text-2xl mt-6 pb-1 border-b font-semibold">Education</h2>
             <ul class="mt-2">
               <li class="pt-2">
-                <p class="flex justify-between text-sm">
+                <p class="flex lg:flex-row flex-col lg:justify-between text-sm">
                   <strong class="text-base">National Central University</strong>2016-2014
                 </p>
-                <p class="flex justify-between text-sm">Applied Geology</p>
+                <p class="flex justify-between lg:text-sm text-xs">Applied Geology</p>
               </li>
               <li class="pt-2">
-                <p class="flex justify-between text-sm">
+                <p class="flex lg:flex-row flex-col lg:justify-between text-sm">
                   <strong class="text-base">Institute for Information Industry</strong
                   >2020/07-2020/01
                 </p>
-                <p class="flex justify-between text-sm">Front-End Engineer Job Readiness Program</p>
+                <p class="flex justify-between lg:text-sm text-xs">
+                  Front-End Engineer Job Readiness Program
+                </p>
               </li>
             </ul>
           </section>
@@ -434,10 +464,13 @@
       </main>
       <!-- short lines to introduce myself -->
       <footer class="mt-6">
-        <p class="bg-gray-600 text-white text-center text-xs pt-2">
+        <p class="bg-gray-600 text-white text-center text-xs pt-2 pb-2 lg:hidden block">
+          Do my best in everything.
+        </p>
+        <p class="bg-gray-600 text-white text-center text-xs pt-2 lg:block hidden">
           The best way to predict the future is to create it. <small>- AbrahamLincoln</small>
         </p>
-        <p class="bg-gray-600 text-white text-center text-sm pb-2">
+        <p class="bg-gray-600 text-white text-center text-sm pb-2 lg:block hidden">
           I am creating my future by learning new things and making small progresses everyday.
         </p>
       </footer>
